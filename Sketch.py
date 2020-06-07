@@ -1,3 +1,4 @@
+# 根据原彩图片生成素描图
 from PIL import Image,ImageFilter,ImageOps
 img = Image.open("/Users/cxt/Downloads/1.jpeg")
 
