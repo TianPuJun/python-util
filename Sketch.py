@@ -1,5 +1,6 @@
 # 根据原彩图片生成素描图
 from PIL import Image,ImageFilter,ImageOps
+# 原图片路径
 img = Image.open("/Users/cxt/Downloads/1.jpeg")
 
 def dodge(a,b,alpha):
@@ -17,5 +18,6 @@ def draw(img,blur=25,alpha=1.0):
             b = img2.getpixel((x,y))
             img1.putpixel((x,y),dodge(a,b,alpha))
     img1.show()
+    # 要生成图片的路径
     img1.save("/Users/cxt/Downloads/1-1.jpeg")
 draw(img)
